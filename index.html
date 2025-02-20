@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cozy Gaming ✨ 🍂</title>
+    <style>
+      /* Sets a gradient background color from top to bottom */
+      body {
+        background: linear-gradient(
+          to bottom,
+          rgb(235, 216, 192) 0%,
+          rgb(252, 243, 232) 90%
+        );
+      }
+      /* Centers the main headings and gives them a bold appearance */
+      h1,
+      h2 {
+        text-align: center;
+        margin: 15px 0;
+        font-weight: 600;
+      }
+      /* Styles the main heading (h1) with padding, font, and size */
+      h1 {
+        padding: 20px 0;
+        font-family: poppins, sans-serif;
+        font-size: 36px;
+      }
+      /* Styling for paragraph text for better readability */
+      h2 {
+        font-family: monospace, sans-serif;
+        font-size: 24px;
+        color: #60452b;
+      }
+
+      /* Styles for subheadings (h3) */
+      h3 {
+        font-family: monospace, sans-serif;
+        font-size: 16px;
+        color: #a27b5c;
+        margin: 20px 30px;
+      }
+
+      /* Ensures images are fully responsive within their containers */
+      img {
+        max-width: 100%;
+      }
+
+      /* Improves readability of paragraph text */
+      p {
+        font-size: 16px;
+        line-height: 20px;
+        font-family: monospace, sans-serif;
+        padding: 10px 30px;
+        margin: 0;
+      }
+
+      /* Styles links with a unique color and hover effect */
+      a {
+        color: #a27b5c;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 15px;
+        font-family: monospace, sans-serif;
+      }
+
+      /* Adds an underline and color change on hover for links */
+      a:hover {
+        text-decoration: underline;
+        color: #6f4e37;
+      }
+
+      /* Styles the footer to be centered with a smaller font size */
+      footer {
+        text-align: center;
+        margin: 30px 0;
+        font-size: 14px;
+        font-family: monospace, sans-serif;
+      }
+
+      /* Adds a horizontal divider for visual separation */
+      hr {
+        border: 1px solid rgb(111, 78, 55, 0.4);
+        margin: 40px auto;
+        width: 80%;
+      }
+
+      /* adds a container to center the content and give it a white background */
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 30px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Styles the button with a background color, border, and padding */
+      .change-theme-button {
+        background: #6f4e37;
+        color: white;
+        border: 1px solid #6f4e37;
+        display: block;
+        margin: 10px auto;
+        border-radius: 30px;
+        padding: 10px 15px;
+        font-family: roboto, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        transition: all 150ms ease-in-out;
+      }
+
+      /* Adds a hover effect to the button */
+      .change-theme-button:hover {
+        background: #af8f6f;
+        color: white;
+        border: 1px solid #af8f6f;
+        cursor: pointer;
+      }
+
+      /* Styles the first image with a border radius and hover effect */
+      .first-gamer-image {
+        display: block;
+        margin: 20px auto;
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+        max-width: 85%;
+        aspect-ratio: 16 / 9;
+      }
+
+      /* Adds a hover effect to the first image */
+      .first-gamer-image:hover {
+        filter: contrast(80%);
+        transform: scale(1.2);
+      }
+
+      /* Creates a grid layout for the images */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin: 10px 30px;
+      }
+
+      /* Styling for the images within the grid */
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        transition: all 150ms ease-in-out;
+        object-fit: cover;
+        aspect-ratio: 9 / 16;
+      }
+
+      /* Adds a hover effect to the images within the grid */
+      .grid img:hover {
+        filter: contrast(80%);
+        transform: scale(1.1) rotate(5deg);
+      }
+
+      /* styling for the learn more link */
+      .learn-more-link {
+        margin: 0 30px;
+      }
+
+      /* Styles the play button with a background color, border, and padding */
+      .play-now-button {
+        background: #6f4e37;
+        color: white;
+        display: block;
+        margin: 20px auto;
+        border: 1px solid #6f4e37;
+        border-radius: 30px;
+        padding: 15px 25px;
+        font-family: roboto, sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        transition: all 150ms ease-in-out;
+        box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Styling for the play button hover effect */
+      .play-now-button:hover {
+        background: #ab886d;
+        color: white;
+        border: 1px solid #ab886d;
+        cursor: pointer;
+      }
+
+      /* Dark mode styles for the gradient background  and paragraph text color */
+      .dark {
+        background-image: radial-gradient(#271d3c 0.5px, #100d18 0.5px);
+        color: #ecdfcc;
+      }
+
+      /* Dark mode styles for headings */
+      .dark h1 {
+        color: #dcd7c9;
+      }
+      .dark h2,
+      .dark h3 {
+        color: #a27b5c;
+      }
+
+      /* Dark mode styles for links */
+      .dark a {
+        color: #a27b5c;
+      }
+
+      .dark a:hover {
+        color: #677d6a;
+      }
+
+      /* Dark mode styles for the footer text */
+
+      .dark footer {
+        color: #ecdfcc;
+      }
+
+      /* Dark mode styles for the container background */
+      .dark .container {
+        background: #1e201e;
+      }
+
+      /* Dark mode styles for the change theme button */
+      .dark .change-theme-button {
+        background: #dcd7c9;
+        color: #3c3d37;
+        border: 1px solid #dcd7c9;
+        transition: all 150ms ease-in-out;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .dark .change-theme-button:hover {
+        background: #697565;
+        color: white;
+        border: 1px solid #697565;
+      }
+
+      /* Dark mode styles for the play now button */
+      .dark .play-now-button {
+        background: #dcd7c9;
+        color: #3c3d37;
+        border: 1px solid #dcd7c9;
+        transition: all 150ms ease-in-out;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .dark .play-now-button:hover {
+        background: #697565;
+        color: white;
+        border: 1px solid #697565;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Button to switch between light and dark mode -->
+    <button class="change-theme-button">DARK THEME</button>
+
+    <!-- Main content of the website wrapped in a div container -->
+    <div class="container">
+      <h1>🍂 Cozy Gaming</h1>
+      <h2>My favourite hobby</h2>
+
+      <!-- Clicking this image leads to an external page about cozy gaming -->
+      <a href="https://en.wikipedia.org/wiki/Cozy_game" target="_blank">
+        <img
+          class="first-gamer-image"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/158/228/original/Cozy-ACNH.png?1739991256"
+          alt="Cozy-Gaming-ACNH"
+        />
+      </a>
+
+      <!-- image gallery showcasing cozy gaming wrapped in a grid container -->
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/158/111/original/coral_island_%F0%9F%8C%8A%E2%9B%85%EF%B8%8F.jpeg?1739925688"
+          alt="Cozy-Gaming-Coral-Island"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/158/113/original/cozy_fall_weekend_%E2%98%95%EF%B8%8F%E2%98%81%EF%B8%8F%F0%9F%8E%AE.jpeg?1739925700"
+          alt="Cozy-Gaming-With-Coffee"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/158/114/original/Cozy_game_nights_%F0%9F%8D%82.jpeg?1739925710"
+          alt="Cozy-Gaming-DDV"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/158/213/original/GamingWithTea.png?1739982889"
+          alt="Cozy-Gaming-With-Tea"
+        />
+      </div>
+
+      <!-- Heading and paragraph text about cozy gaming -->
+
+      <h3>Press Play and Forget the Day</h3>
+      <p>
+        Cozy gaming is all about embracing low-pressure, feel-good games that
+        let you relax and unwind. Whether you're decorating a cozy home, solving
+        puzzles, or just exploring a calm world, these games offer a peaceful
+        escape from the hustle and bustle.
+      </p>
+
+      <p>
+        Beyond just being fun, studies show that cozy gaming can reduce stress,
+        improve mental health, boost creativity, and even improve cognitive
+        skills. It helps you stay present and engaged, offering a perfect
+        balance of relaxation and stimulation. In short, cozy gaming isn't just
+        entertaining—it's a feel-good way to recharge your mind and spirit.
+      </p>
+
+      <!-- Learn more link to the Wikipedia page about cozy games -->
+      <a
+        href="https://en.wikipedia.org/wiki/Cozy_game"
+        target="_blank"
+        class="learn-more-link"
+        >📖 Learn more</a
+      >
+
+      <!-- Play button to start a cozy gaming session -->
+
+      <button class="play-now-button">PLAY NOW</button>
+
+      <hr />
+
+      <!-- Footer with credits and link to my SheCodes profile -->
+      <footer>
+        👩🏻‍💻 Coded with 💞 by
+        <a
+          href="https://www.shecodes.io/graduates/68536-kezia-mccabe"
+          target="_blank"
+          >Kezia McCabe</a
+        >
+        🛠️
+      </footer>
+    </div>
+    <!-- End of the main content container -->
+
+    <script>
+      // Function to change the theme of the website
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        // Checks if the body has the dark class and if so, removes it
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+          let themeButton = document.querySelector(".change-theme-button");
+          themeButton.innerHTML = "DARK THEME";
+          let heading = document.querySelector("h1");
+          heading.innerHTML = "🍂 Cozy Gaming";
+        } else {
+          // If the body does not have the dark class, it adds it
+          body.classList.add("dark");
+          let themeButton = document.querySelector(".change-theme-button");
+          themeButton.innerHTML = "LIGHT THEME";
+          let heading = document.querySelector("h1");
+          heading.innerHTML = "🤍 Cozy Gaming";
+        }
+      }
+
+      // Selects the theme button and adds an event listener to trigger changeTheme function
+      let themeButton = document.querySelector(".change-theme-button");
+      themeButton.addEventListener("click", changeTheme);
+
+      function playNow() {
+        let name = prompt("What is your first name?");
+        let email = prompt("What is your email?");
+        let playNow = prompt("Are you ready for some cozy gaming time??");
+
+        // Cleans up the user's response to make it lowercase and trim any extra spaces, exclamations, or yes variations
+        let cleanedResponse = playNow
+          .toLowerCase()
+          .trim()
+          .replace(/!+$/, "")
+          .replace(/^ye+s+$/, "yes");
+
+        // Checks if the cleaned response is "yes" and displays a message accordingly
+        if (cleanedResponse === "yes") {
+          // If the user responds with "yes", they receive message 1
+          alert(
+            `Yay, ${name}! 🙌 🎉  Get comfy and let's dive into a world of cozy adventures. 🌸✨🎮`
+          );
+        } else {
+          // If the user responds with anything else, they receive message 2
+          alert(
+            `Totally get it, ${name}! Sometimes a warm blanket, a good book, or a cup of tea is all you need. ☕️✨ Whenever you're ready, cozy gaming will be waiting for you! 🧸`
+          );
+        }
+      }
+      // Selects the play button and adds an event listener to trigger the playNow function
+      let playButton = document.querySelector(".play-now-button");
+      playButton.addEventListener("click", playNow);
+    </script>
+  </body>
+</html>
